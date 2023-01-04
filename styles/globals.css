@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #088178;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 64px;
+  color: #222;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+@media(max-width: 790px){
+  h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  
+  h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  
+  h4 {
+    font-size: 14px;
+  }
+  
+  h6 {
+    font-size: 10px;
+  }
+  p{
+    font-size: 14px;
+  }
+}
+
+.cartIcon {
+  padding: 7px;
+  width: 45px;
+  height: 45px;
+  color: #088178;
+  line-height: 50px;
+  border-radius: 50px;
+  border: 1px solid #cce7d0;
+  background-color: #e8f6ea;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-x {
+  align-self: center;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: 0.3s ease;
+  padding: 6px 12px;
+}
+
+table thead td {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 20px 0;
+  max-width: 150px;
+  min-width: 60px;
+  text-align: center
+}
+
+.td {
+  font-size: 15px;
+  max-width: 150px;
+  min-width: 60px;
+  padding: 10px 0;
+  text-align: center
+}
+
+.webkit {
+  text-align: -webkit-center;
+}
+
+.quantity {
+  @apply w-[70px] py-2 px-2 outline-none;
+  border: 1px solid #000000;
+}
+
+.button {
+  @apply w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md;
+  @apply py-3 text-gray-50 text-lg
+}
+
+.button:hover {
+  @apply bg-gradient-to-r from-gray-50 to-gray-100 border-blue-500;
+  @apply text-gray-700 border;
+}
+
+.button_custom {
+  @apply w-full border py-3 flex items-center justify-center gap-2 hover:bg-gray-100;
+}
+
+.input_group {
+  @apply flex border rounded-xl;
+  position: relative;
+}
+
+.input_text {
+  @apply w-full py-3 px-6 border rounded-xl bg-gray-100;
+  @apply focus:outline-none border-none
+}
+
+.input {
+  @apply w-[80%] py-[15px] px-[20px] rounded-sm border-2 border-[#ccd6f6] bg-[#2335541a] outline-none text-[#a8b2d1]
+}
+
+.shippingInput {
+  @apply w-full px-4 py-2 border-[1px] border-[#000] rounded-md outline-none
+}
+
+.card {
+  @apply mb-5 block rounded-lg border border-gray-200 shadow-md;
+}
+
+.alert-error {
+  @apply my-3 rounded-lg bg-red-100 p-3 text-red-700;
+}
+
+.alert-success {
+  @apply my-3 rounded-lg bg-green-100 p-3 text-green-700;
+}
+
+footer h4 {
+  font-size: 16px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+footer p {
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+
+footer a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.newsletter {
+    background-image: url('/assets/b14.png');
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+
+@media(max-width: 790px) {
+ .nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100vh;
+  width: 300px;
+  background-color: #E3E3F3;
+  padding: 80px 0 0 40px;
+  transition: 0.3s;
+ } }
+
+ .contact input,  .contact textarea {
+    @apply w-full mb-5 py-3 px-4 outline-none border-2 border-[#e1e1e1] rounded-md;
+ }
+
+ .positive {
+  color: green;
+}
+.negative {
+  color: red;
+}
+
+.floating_input {
+  @apply block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600;
+}
+
+.floating_label {
+  @apply peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6;
+}
