@@ -76,7 +76,7 @@ const Order = () => {
             }
         } else {
             const loadPaypalScript = async () => {
-                const { data: clientId } = await axios.get(`http://localhost:3000/api/paypal`)
+                const { data: clientId } = await axios.get(`https://nextjsfashx.vercel.app/api/paypal`)
                 console.log(clientId)
                 paypalDispatch({
                     type: 'resetOptions',
