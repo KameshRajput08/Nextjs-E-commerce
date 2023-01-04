@@ -30,7 +30,7 @@ const AdminScreen = () => {
         const fetchSummary = async () => {
             try {
                 dispatch({ type: 'FETCH_REQUEST' });
-                const { data } = await axios.get(`http://localhost:3000/api/admin/summary`);
+                const { data } = await axios.get(`/api/admin/summary`);
                 dispatch({ type: 'FETCH_SUCCESS', payload: data });
             } catch (err) {
                 dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
