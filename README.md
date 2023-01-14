@@ -1,3 +1,6 @@
+# NEXT E-commerce website
+## DEMO: [https://nextjsfashx.vercel.app/](https://nextjsfashx.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,3 +35,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Environment variables
+- MANGO_URL
+- GOOGLE_SECRET
+- PAYPAL_CLIENT_ID
+- SECRET
+- JWT_SECRET
+- GOOGLE_ID
+
+## Technologies used:
+### Backend 
+- Nextjs
+- next-auth
+- Reactjs
+- Mongodb/mongoose
+- JWT / jsonwentoken
+- Bcryptjs
+- Paypal
+- @paypal/react-paypal-js
+- react-spinners
+- Redux/reduxjs-toolkit
+- Redux-persist
+- recharts
+- Formik (forms)
+- Headlessui
+- Formspree
+- React-Hooks
+- react-toastify 
+
+### Features
+- Interaction with the backend through Rest API. 
+- Secured Authentication system with signup/email/login/signout using [next-auth](https://next-auth.js.org/)
+- awesome fully mobile responsive design.
+- State management using redux-toolkit/redux.
+- pagination.
+- view product info/ add to cart/ choose color and size.
+- sort products according to size, color, price, new.
+- order products/ view orders.
+- order products / pay using paypal / view orders status and history.
+- Payment using Paypal
+- Menu using headlessui
+- Admin panel(only admin)
+- view sales, earnings, products, users and progress.
+- Last 10 months sales on graph(recharts).
+- Create or edit user, product and change delivery status.
+
