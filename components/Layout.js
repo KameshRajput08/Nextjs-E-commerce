@@ -36,9 +36,8 @@ const Layout = ({ children, title }) => {
                             <div className='flex items-center justify-between gap-6 nav-right' ref={navRef}>
                                 <Link className="nav-link" href="/">Home</Link>
                                 <Link className="nav-link" href="/shop">Shop</Link>
-                                <Link className="nav-link" href="/blog">Blog</Link>
-                                <Link className="nav-link" href="/about">About</Link>
                                 <Link className="nav-link" href="/contact">Contact</Link>
+                                <Link className="nav-link" href="/cart">Cart</Link>
                                 {
                                     !session && <Link href='/login'><button className='btn-x  bg-[#088178] text-white'>Sign In</button></Link>
                                 }
