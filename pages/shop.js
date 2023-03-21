@@ -17,7 +17,7 @@ const Shop = ({ data }) => {
         const filteredProducts = products.filter((product) => {
           search.toLocaleLowerCase();
           product.name.toLocaleLowerCase();
-          return product.title.includes(search);
+          return product?.name?.includes(search);
         });
         setProducts(filteredProducts);
       } else {
