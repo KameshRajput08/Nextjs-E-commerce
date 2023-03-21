@@ -14,7 +14,7 @@ const Shop = ({ data }) => {
     useEffect(() => {
         async function fetchData() {
             if (search !== "") {
-                const res = await axios.get(`http://localhost:3000/api/product/search?term=${search}`)
+                const res = await axios.get(`/api/product/search?term=${search}`)
                 setProducts(res.data)
             }
         }
