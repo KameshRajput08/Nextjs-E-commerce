@@ -6,12 +6,18 @@ import Layout from '../../components/Layout'
 import Product from '../../models/Product'
 import connectMongo from '../../utils/conn'
 import { ADD_ITEM } from '../../utils/redux/cartSlice'
+import { useSession } from "next-auth/react"
 
 const ProductPage = ({ product }) => {
+    const { data: session } = useSession()
     const dispatch = useDispatch();
-    const { query } = useRouter()
+    const router = useRouter;
+    const query = router.query;
 
     const handleAddToCart = () => {
+        if(!data){
+            router.push('/login')
+        }
         product.countInStock > 0 ? dispatch(ADD_ITEM({ product })) : toast.error('Product is out of Stock.')
     }
     return (
