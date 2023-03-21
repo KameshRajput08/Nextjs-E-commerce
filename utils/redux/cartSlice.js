@@ -27,7 +27,7 @@ const cartSlice = createSlice({
                 default:
                     break;
             }
-            !action.payload.type === 'cartItems' && axios.post(`/api/cart`, {
+            !action.payload.type === 'cartItems' && axios.post(`http://localhost:3000/api/cart`, {
                 data: state.cart
             })
 
@@ -35,26 +35,26 @@ const cartSlice = createSlice({
         ADD_ITEM: (state, action) => {
             const index = state.cart.cartItems.findIndex((item, index) => item.slug === action.payload.product.slug)
             index >= 0 ? state.cart.cartItems[index].quantity = state.cart.cartItems[index].quantity + 1 : state.cart.cartItems.push({ ...action.payload.product, quantity: 1 })
-            axios.post(`/api/cart`, {
+            axios.post(`http://localhost:3000/api/cart`, {
                 data: { cartItems: [...state.cart.cartItems] }
             })
         },
         REMOVE_ITEM: (state, action) => {
             const index = state.cart.cartItems.findIndex((item, index) => item.slug === action.payload.slug)
             state.cart.cartItems.splice(index, 1)
-            axios.post(`/api/cart`, {
+            axios.post(`http://localhost:3000/api/cart`, {
                 data: { cartItems: [...state.cart.cartItems] }
             })
         },
         CHANGE_QUANTITY: (state, action) => {
             state.cart.cartItems[action.payload.index].quantity = action.payload.value
-            axios.post(`/api/cart`, {
+            axios.post(`http://localhost:3000/api/cart`, {
                 data: { cartItems: [...state.cart.cartItems] }
             })
         },
         CLEAR_CART: (state, action) => {
             state.cart.cartItems = []
-            axios.post(`/api/cart`, {
+            axios.post(`http://localhost:3000/api/cart`, {
                 data: { cartItems: [] }
             })
         }
